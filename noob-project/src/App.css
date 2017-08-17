@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  color: white;
-  background-color: #304463 ;
 }
 
 .App-logo {
@@ -19,8 +17,9 @@
 .App-intro {
   font-size: large;
 }
-navbar {
-  background-color: #112b3f ;
+nav {
+
+color: #112b3f ;
 }
 body{
   background-image: url(http://news.cdn.leagueoflegends.com/public/images/pages/2015/bard/img/Promo_Bard_TeaserSite_WP2.jpg);
