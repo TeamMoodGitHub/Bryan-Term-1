@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  color: white;
+  background-color: #304463 ;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #112b3f ;
+  height:0px;
+  padding: 0px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+navbar {
+  background-color: #112b3f ;
+}
+body{
+  background-image: url(http://news.cdn.leagueoflegends.com/public/images/pages/2015/bard/img/Promo_Bard_TeaserSite_WP2.jpg);
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
