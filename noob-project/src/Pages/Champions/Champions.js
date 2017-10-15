@@ -1,38 +1,33 @@
 import React, { Component } from 'react';
 
+import { Switch, Route, Link} from 'react-router-dom';
+
+import App from '../../App';
+
+
+
 import './Champions.css';
-import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 
 class Champions extends Component {
-  render() {
+  render(props) {
+    let { match } = this.props;
     return (
-      <div className="Champions">
-      <Navbar>
-            <Navbar.Header>
-            <Navbar.Brand>
-                <a href="#">League of Noobs</a>
-            </Navbar.Brand>
-            </Navbar.Header>
-            <Nav>
-            <NavItem eventKey={1} href="#">Champions</NavItem>
-            <NavItem eventKey={2} href="#">Guides</NavItem>
-            <NavDropdown eventKey={3} title="Other" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Contact Us</MenuItem>
-                <MenuItem eventKey={3.2}>Help</MenuItem>
-                <MenuItem eventKey={3.3}></MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={3.3}>Sign-In</MenuItem>
-            </NavDropdown>
-            </Nav>
-        </Navbar>
-        <div className="Champions-header">
+      <Switch>
+        <Route exact path={match.url} render={() => {
+            return (
+              <div className="/Champions">
+              <div className="Champions-header">
 
-          <h2>Hello World!</h2>
-        </div>
-        <p className="Champions-intro">
-
-        </p>
-      </div>
+                <h2>Champions</h2>
+              </div>
+              <p className="Champions-intro">
+                <Link to='/Champions/ahri'>Ahri</Link>
+              </p>
+              </div>
+            );
+          }} />
+        <Route path={`${match.url}/:champion`} component={App} />
+      </Switch>
     );
   }
 }

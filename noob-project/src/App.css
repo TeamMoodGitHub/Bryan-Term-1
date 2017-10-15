@@ -25,6 +25,10 @@ body{
   background-image: url(http://news.cdn.leagueoflegends.com/public/images/pages/2015/bard/img/Promo_Bard_TeaserSite_WP2.jpg);
 }
 
+.navbar-brand {
+  cursor: pointer;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
